@@ -77,6 +77,7 @@ const reducer = (state = initialState, action) => {
             return flag;
           }),
         };
+        break;
       }
 
     case "FILTRATEDAZ":
