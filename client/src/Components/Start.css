@@ -1,0 +1,118 @@
+body, html {
+  margin: 0;
+  height: 100vh;
+  cursor: crosshair;
+}
+.Background {
+  height: 100vh;
+  background-image: url("https://i.redd.it/8s2qmu9p00361.gif");
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+}
+
+.Container__Out {
+  width: 95%;
+  height: 95%;
+  /* border: 5px solid #11111159; */
+  margin: 0 auto;
+  display: flex;
+}
+.Container__Left {
+  width: 40%;
+  /* border: 5px solid #11111159; */
+  align-self: center;
+}
+.Container__Right {
+  width: 60%;
+  /* border: 5px solid #11111159; */
+  align-self: center;
+}
+
+.NekoButtom {
+  width: 60%;
+  height: 50%;
+  position: relative;
+  left: 20%;
+}
+.NekoButtom:hover {
+  transition: all 1s;
+  left: 21%;
+  border: 0.1rem solid #ddd;
+  border-radius: 40rem;
+  box-shadow: -0px 5px 10px 25px rgba(240, 71, 189, 0.48);
+  backdrop-filter: blur(5px);
+}
+
+:root {
+  /* Base font size */
+  font-size: 18px;
+}
+
+.Text__Intro {
+  text-shadow: 6px 1px #111;
+  padding: 10px;
+  font-family: Regular_Arcade;
+  line-height: 1.7;
+  text-align: center;
+  color: white;
+  border: 0.4rem solid #fff;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  background-color: rgba(45, 107, 240, 0.294);
+  box-shadow: 0 0 4rem rgb(45, 107, 240);
+  backdrop-filter: blur(3px);
+}
+
+.Text__Warning {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: line-through dashed rgba(0, 0, 0, 0.3);
+  font-size: 0.8em;
+}
+
+/* Cthulhu_Arcade  Arcade_Classic  Regular_Arcade  Old_Bits */
+
+.Text__Title {
+  
+  box-sizing: border-box;
+  background-color: #2814da60;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  word-spacing: 5px;
+  text-align: center;
+  font-family: Old_Bits;
+  color: rgb(223, 126, 35);
+
+  
+}
+.Text__Title::before {
+  content: "aaaaaaa";
+  color: transparent;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 2px,
+    white 2px,
+    white 4px
+  );
+}
+.Text__Title::after {
+  content: "aaaaaaa";
+  color: transparent;
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 2px,
+    white 2px,
+    white 4px
+  );
+}
+
+
+.Text__Decoration {
+  text-align: center;
+  font-family: Arcade_Classic;
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 0 0 20px #ff005b;
+}

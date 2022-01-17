@@ -1,0 +1,155 @@
+body, html {
+  margin: 0;
+  height: 100vh;
+  cursor: crosshair;
+}
+.Background__Details {
+  height: 100vh;
+  background-image: url("../rsc/notfound.gif");
+  background-position: center;
+  background-size: cover;
+}
+
+.Back__Buttom{
+  position: absolute;
+  top: 660px;
+  left:325px;
+}
+
+.HomeButtom {
+  width: 11.5vh;
+  height: 3.7vw;
+  background: none;
+  font-size: 55px;
+  font-family: Regular_Arcade;
+  /* border: 1px solid #111111; */
+  color: inherit;
+  
+}
+.HomeButtom:hover{
+  cursor: pointer;
+  backdrop-filter: saturate(10%);
+  transition: all 0.5s;
+  font-size: 60px;
+  border-radius: 0;
+}
+
+.Name__Details{
+  position: absolute;
+  font-family: Arcade_Classic;
+  font-size: 4.5vh;
+  left:59vh;
+  top: 7.5vw;
+  font-weight: bold;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  max-width: 35vw;
+  max-height: 5vh;
+}
+.Released__Details{
+  position: absolute;
+  font-family: Arcade_Classic;
+  font-size: 3.9vh;
+  left:97vh;
+  top: 40.5vw;
+  font-weight: bold;
+}
+.GameImg{
+  position:absolute;
+  left:61.35vh;
+  top: 11.5vw;
+}
+
+.GameImg__img{
+  width: 66vh;
+  height: 26vw;
+}
+.Rating{
+  position:absolute;
+  top: 435px;
+  left:1380px;
+  font-family: Regular_Arcade;
+  font-size: 17px;
+}
+.GameDescription{
+  font-size:18px;
+  overflow: scroll;
+  font-family: Cthulhu_Arcade;
+  position:absolute;
+  /* border: 2px solid #31312E; */
+  width: 42vh;
+  height: 26vw;
+  top: 70px;
+  left: 30px;
+}
+.GameDescription__Container{
+  position:absolute;
+  width: 61vh;
+  height: 35vw;
+  top: -2vh;
+  left: -3vw;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.0);
+}
+
+.Genre__Container__Details{
+  position:absolute;
+  width: 20vh;
+  height: 6vw;
+  top: 57vh;
+  left: 75.5vw;
+  /* border: 1px solid black; */
+  overflow: scroll;
+  list-style: none;
+}
+
+.Genre__Details{
+  overflow: scroll;
+  list-style: none;
+  font-size: 3vh;
+  font-family: Arcade_Classic;
+}
+/* Cthulhu_Arcade  Arcade_Classic  Regular_Arcade  Old_Bits */
+
+.Platform__Container__Detailed{
+  position:absolute;
+  width: 29vh;
+  height: 10vw;
+  top: 72vh;
+  left: 70vw;
+  /* border: 1px solid black; */
+  list-style: none;
+  overflow: scroll;
+}
+
+.Platfom__Detailed{
+  list-style: none;
+  font-size: 3vh;
+  font-family: Arcade_Classic;
+}
+
+.Mouse__Scroll__1{
+  position: absolute;
+  width: 25vh;
+  height: 7vw;
+  left: 66.4vw;
+  top: 57.8vh;
+}
+.Mouse__Scroll__2{
+  position: absolute;
+  width: 25vh;
+  height: 7vw;
+  left: 1vw;
+  top: 61vh;
+  /* border: 3px solid black; */
+}

@@ -1,0 +1,30 @@
+.Pagination__ul{
+    list-style-type: none;
+    padding: 10px
+
+}
+
+/* .Pagination__Li{
+    color: rgb(30, 255, 0);
+
+} */
+
+.Pagination__Button{
+    color: rgb(45, 211, 23);
+    height: 10vh;
+    width: 6vw;
+    overflow: scroll;
+    font-size: 4vh;
+}
+.Pagination__Button:hover{
+    transition: 1s all;
+    overflow: scroll;
+    background: transparent;
+    backdrop-filter: blur(70%);
+    color: rgb(0, 0, 0);
+    box-shadow: 5px 5px 5px 5px rgba(143, 42, 42, 0.733);
+    text-shadow: 5px 0px 5px 0px black;
+    height: 12vh;
+    width: 6vw;
+    font-size: 7vh;
+}
