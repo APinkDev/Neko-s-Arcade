@@ -40,10 +40,10 @@ conn.sync({ force: false }).then(() => {
 });
 
 //optional
-// const cors = require("cors");
-// server.use(
-//   cors({
-//     origin: '*',
-//   })
-// );
+const cors = require("cors");
+server.use(
+  cors({
+    origin: '*',
+  })
+);
 //optional
