@@ -1,20 +1,27 @@
 export const Generate = (arg) => {
   return function (dispatch) {
-    fetch(`/videogames?name=${arg}`)
-      .then((result) => result.json())
-      .then((r) => {
-        // console.log(r);
-        dispatch({ type: "GENERATE", payload: r });
-      });
+    try {
+      fetch(`/videogames?name=${arg}`)
+        .then((result) => result.json())
+        .then((r) => {
+          // console.log(r);
+          dispatch({ type: "GENERATE", payload: r });
+        });
+    } catch (err) {
+      console.log(err);
+    }
   };
 };
 
 export const Randomize = () => {
   return function (dispatch) {
     fetch(`/videogames`)
-      .then((result) =>  result.json())
+      .then((result) => result.json())
       .then((r) => {
-        return dispatch({ type: "RANDOMIZE", payload:Array.isArray(r)&& r.flat() });
+        return dispatch({
+          type: "RANDOMIZE",
+          payload: Array.isArray(r) && r.flat(),
+        });
       });
   };
 };
@@ -30,52 +37,50 @@ export const GetGenres = () => {
   };
 };
 
-
 export const Filtrated = (arg) => {
   return {
     type: "FILTRATED",
-    payload: arg
+    payload: arg,
   };
 };
 
 export const FiltratedAZ = (arg) => {
   return {
     type: "FILTRATEDAZ",
-    payload: arg
+    payload: arg,
   };
 };
 export const FiltratedType = (arg) => {
   // console.log("momento: ",arg)
-  return{
+  return {
     type: "FILTRATEDTYPE",
-    payload: arg
-  }
-}
+    payload: arg,
+  };
+};
 
 export const Detailed = (id) => {
   return function (dispatch) {
-    try{
-
+    try {
       fetch(`/videogame/${id}`)
         .then((result) => result.json())
         .then((r) => {
           // console.log("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",r);
           dispatch({ type: "DETAILED", payload: r });
         });
-
-    }catch(err){
-      console.log(err)
+    } catch (err) {
+      console.log(err);
     }
   };
 };
-export const Post=(inputs)=>{
-  return function (dispatch){
+export const Post = (inputs) => {
+  return function (dispatch) {
     // console.log("CONCHA TU MADRE EXISTE!")
-    fetch("/create",{method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(inputs),
-  }).then(resu=>console.log(resu))
-  }
-}
+    fetch("/create", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(inputs),
+    }).then((resu) => console.log(resu));
+  };
+};
