@@ -42,7 +42,7 @@ const reducer = (state = initialState, action) => {
     }
 
     case "FILTRATED":
-      {
+      // {
         if (action.payload && state.Filtred.length === 0) {
           let flag = false;
           return {
@@ -60,7 +60,7 @@ const reducer = (state = initialState, action) => {
             }),
           };
         }
-      }
+      // }
       if (action.payload && state.Filtred.length !== 0) {
         let flag = false;
         return {
@@ -77,9 +77,9 @@ const reducer = (state = initialState, action) => {
             return flag;
           }),
         };
-        break;
-      }
 
+      }
+      break;
     case "FILTRATEDAZ":
       if (action.payload === "") {
         return {
