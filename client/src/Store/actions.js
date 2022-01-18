@@ -1,7 +1,7 @@
 export const Generate = (arg) => {
   return function (dispatch) {
     try {
-      fetch(`/videogames?name=${arg}`)
+      fetch(`https://nekosarcade.herokuapp.com/videogames?name=${arg}`)
         .then((result) => result.json())
         .then((r) => {
           // console.log(r);
@@ -15,9 +15,10 @@ export const Generate = (arg) => {
 
 export const Randomize = () => {
   return function (dispatch) {
-    fetch(`/videogames`)
+    fetch(`https://nekosarcade.herokuapp.com/videogames`)
       .then((result) => result.json())
       .then((r) => {
+        console.log("aaaaaaaaaaa");
         return dispatch({
           type: "RANDOMIZE",
           payload: Array.isArray(r) && r.flat(),
@@ -28,7 +29,7 @@ export const Randomize = () => {
 
 export const GetGenres = () => {
   return function (dispatch) {
-    fetch(`/videogames/genres`)
+    fetch(`https://nekosarcade.herokuapp.com/videogames/genres`)
       .then((result) => result.json())
       .then((r) => {
         // console.log(r);
@@ -61,7 +62,7 @@ export const FiltratedType = (arg) => {
 export const Detailed = (id) => {
   return function (dispatch) {
     try {
-      fetch(`/videogame/${id}`)
+      fetch(`https://nekosarcade.herokuapp.com/videogame/${id}`)
         .then((result) => result.json())
         .then((r) => {
           // console.log("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",r);
