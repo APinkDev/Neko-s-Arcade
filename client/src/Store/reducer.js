@@ -13,7 +13,7 @@ const reducer = (state = initialState, action) => {
       state = initialState;
       return {
         ...state,
-        Videogame: state.Videogame.concat(action.payload),
+        Videogame: state.Videogame.concat(action.payload.videogames),
       };
     }
 
@@ -21,7 +21,7 @@ const reducer = (state = initialState, action) => {
       state = initialState;
       return {
         ...state,
-        Videogame: state.Videogame.concat(action.payload),
+        Videogame: state.Videogame.concat(action.payload.videogames),
       };
     }
 
@@ -29,7 +29,7 @@ const reducer = (state = initialState, action) => {
       state.ApiGenres = state.ApiGenres.slice(0, state.ApiGenres.length - 1);
       return {
         ...state,
-        ApiGenres: state.ApiGenres.concat(action.payload),
+        ApiGenres: state.ApiGenres.concat(action.payload.videogames),
       };
     }
 
@@ -37,7 +37,7 @@ const reducer = (state = initialState, action) => {
       state = initialState;
       return {
         ...state,
-        Details: action.payload,
+        Details: action.payload.videogames,
       };
     }
 

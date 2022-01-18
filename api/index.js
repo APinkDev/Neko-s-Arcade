@@ -39,9 +39,11 @@ conn.sync({ force: false }).then(() => {
   });
 });
 
-const cors = require("cors");
-server.use(
-  cors({
-    origin: '*',
-  })
-);
+//optional
+// const cors = require("cors");
+// server.use(
+//   cors({
+//     origin: '*',
+//   })
+// );
+//optional
